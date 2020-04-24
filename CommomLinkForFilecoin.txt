@@ -1,0 +1,51 @@
+﻿
+大家关心并常用的链接：
+
+1. lotus安装文档：
+    https://docs.lotu.sh/en+install-lotus-ubuntu
+
+2. GOPROXY（编译时使用）：
+    export GOPROXY=https://goproxy.io
+    或者
+    export GOPROXY=https://goproxy.cn
+
+3. 区块浏览器：
+    https://stats.testnet.filecoin.io/      【按ESC可以选择看Testnet3的数据】
+    https://filscout.io/en/                 【毛必盛大佬开发，可切换Testnet2和Testnet3】
+    https://filscan.io/#/
+    http://testnet3.1475ipfs.com:10300/d/z6FtI92Zz/testnet3?orgId=1&refresh=25s   【1475团队开发】
+
+4. 区块同步数据备份（目前是Testnet2的同步数据）：
+    https://lotus-archives.textile.io/
+
+5. 官方博客：
+    https://filecoin.io/blog/
+
+6. Lotus Specification 说明文档：
+    https://filecoin-project.github.io/specs/
+
+7. Slack:
+    https://filecoinproject.slack.com/
+
+8. Lotus 代码下载:
+    Lotus：         https://github.com/filecoin-project/lotus
+    Go-filecoin：   https://github.com/filecoin-project/go-filecoin
+    Rust-fil-proof: https://github.com/filecoin-project/rust-fil-proofs
+
+9. testnet/3 最大化内存参数（仅针对32GB扇区）：
+    export FIL_PROOFS_MAXIMIZE_CACHING=1
+
+10. 水龙头地址：
+    Testnet2(旧版): https://faucet.testnet.filecoin.io/
+    Testnet3(新版): http://t01000.miner.interopnet.kittyhawk.wtf
+    
+11. Benchmark数据共享：
+    Testnet2(V20): https://github.com/filecoin-project/lotus/issues/839
+    Testnet3(V24): https://github.com/filecoin-project/lotus/issues/1475
+    Testnet3(V25): https://filecoin-benchmarks.on.fleek.co/
+    
+12. 甘特图：
+    https://app.instagantt.com/shared/s/1152992274307505/latest
+    
+    
+    
