@@ -11,7 +11,7 @@
 
 ## 3. 区块浏览器：
     https://stats.testnet.filecoin.io/      【按ESC可以选择看Testnet3的数据】
-    https://filscout.io/en/                 【毛必盛大佬开发，可切换Testnet2和Testnet3】
+    https://filscout.io/en/                 【星际联盟团队开发，可切换Testnet2和Testnet3】
     https://filscan.io/#/
     http://testnet3.1475ipfs.com:10300/d/z6FtI92Zz/testnet3?orgId=1&refresh=25s   【1475团队开发】
 
