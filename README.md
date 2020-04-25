@@ -78,7 +78,85 @@ export RUST_LOG=Debug
 ```
 运行 miner 之前加入该参数可以在 miner 的日志中查看更详细的输出信息（底层 rust 代码的输出信息），Log 登记从低到高分别有： **`Trace`**、**`Debug`**、**`Info`**、**`Warn`**、**`Error`**，**`Trace`** 输出的信息最详细，**`Error`** 输出的信息最少，仅输入错误信息。
 
+## 4. 手动设置链的高度（比如设置成 3800）：
 
+```Shell
+lotus chain sethead --epoch 3800
+```
+
+## 5. Testnet3 设置存储路径：
+
+```Shell
+# 设置密封扇区的存储路径，密封完成之后该路径下的数据会被自动清空，相当于临时目录
+# 执行该命令可能需要一点时间等待
+lotus-storage-miner storage attach --seal --init /path/to/fast_cache
+
+# 设置数据存储路径，该路径用来存储最终密封好的数据
+# 执行该命令可能需要一点时间等待
+lotus-storage-miner storage attach --store --init /path/to/persistent_storage
+```
+
+以上两个命令都是在启动了 miner 之后才可以执行，是一种动态添加存储路径的方式，非常灵活。
+当然还可以在命令中添加权重 `--weight=10`，默认权重是 10。
+
+默认存储路径是： ~/.lotusstorage ，每个存储路径下都会有个 sectorstore.json 配置文件，
+该文件可以配置该存储路径的用途，比如，是否可以用来存储密封过程中生成的临时文件（"CanSeal": true,），
+是否可以用来存储密封好的数据（"CanStore": true），以及该路径的权重（"Weight": 10）和一唯一标识符：ID。
+
+```Json
+user@user:~/.lotusstorage$ cat sectorstore.json 
+{
+"ID": "508165ac-5103-45b4-9bb9-a95f5973776e",
+"Weight": 10,
+"CanSeal": true,
+"CanStore": true
+}
+```
+
+## 6. Testnet3 查看 Worker 信息
+
+```Shell
+lotus-storage-miner workers list
+```
+
+## 7. Testnet3 启动 worker：
+
+```Shell
+lotus-seal-worker run --address=192.168.1.201:2333 --precommit1=false --precommit2=true --commit=true
+```
+要给 worker 指定**本机地址**和一个**随机端口（四位数以上）**，`precommit1`、`precommit2` 和`commit` 是默认启动，如果想要禁用，可以设置为 `false`，例如：`--precommit1=false`。
+最后，`commit` 参数是配置 `commit2` 的，而 `commit1` 是无法在 Worker 中启用的。
+
+
+## 8. 查看本节点与连接其它节点
+
+```Shell
+# 查看本节点所监听的地址：
+lotus net listen
+# 连接其它节点的地址（命令中的地址为示例地址）：
+lotus net connect /ip4/47.240.110.221/tcp/44845/p2p/12D3KooWRgxLL84TSkYSjhvhCy5ZNSuJZZzHWp2FXDY7ufqGBmUW
+```
+当启动 daemon 之后无法正常同步链上的数据，可以试试在启动 daemon 的时候禁用自动连接 peers （即：加上 `--bootstrap=false` 参数），然后手动连接到一个正常节点，例如：
+```Shell
+lotus daemon --bootstrap=false
+lotus net connect /ip4/47.240.110.221/tcp/44845/p2p/12D3KooWRgxLL84TSkYSjhvhCy5ZNSuJZZzHWp2FXDY7ufqGBmUW
+```
+上述的节点是示例节点，当您在使用该命令的时候，您需要自己去找一个可以使用的节点。
+
+## 9. 赎回已获得的奖励（Testnet3 才需要手动赎回）
+
+```Shell
+lotus-storage-miner rewards redeem
+lotus-storage-miner rewards list
+```
+赎回之后，可能需要过一段时间才能看到自己钱包的余额增加。
+
+## 10. 未完
+
+```Shell
+lotus sync status
+```
 
 
 【**注**】以上内容仅为个人整理，如有侵权或不当的地方，请及时指出，我会及时修改！
+
