@@ -13,7 +13,7 @@
     https://stats.testnet.filecoin.io/      【按ESC可以选择看Testnet3的数据】
     https://filscout.io/en/                 【星际联盟团队开发，可切换Testnet2和Testnet3】
     https://filscan.io/#/
-    http://testnet3.1475ipfs.com:10300/d/z6FtI92Zz/testnet3?orgId=1&refresh=25s   【1475团队开发】
+    http://testnet3.1475ipfs.com:10300/d/z6FtI92Zz/testnet3?orgId=1&refresh=25s   【1475团队开发， 仅Testnet3】
 
 ## 4. 区块同步数据备份（目前是Testnet2的同步数据）：
     https://lotus-archives.textile.io/
@@ -51,7 +51,7 @@
     JDCloud(v20): https://s3.cn-south-1.jdcloud-oss.com/proof-parameters/filecoin-proof-parameters-v20.tar.gz
     JDCloud(v25): env IPFS_GATEWAY=https://proof-parameters.s3.cn-south-1.jdcloud-oss.com/ipfs/
     CoinSummer(中国专用/ v24和v25): https://filecoin-proofs.coinsummer.io/
-    CoinSummer(v25 URL):https://filecoin-proofs.coinsummer.io/v25.txt
+    CoinSummer(v25 URL): https://filecoin-proofs.coinsummer.io/v25.txt
 [参考](https://filecoinproject.slack.com/archives/CPFTWMY7N/p1587615402405300)
 
 
@@ -80,3 +80,5 @@ export RUST_LOG=Debug
 
 
 
+
+【**注**】以上内容仅为个人整理，如有侵权或不当的地方，请及时指出，我会及时修改！
