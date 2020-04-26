@@ -38,15 +38,15 @@
 ## 10. 水龙头地址：
     Testnet2(旧版): https://faucet.testnet.filecoin.io/
     Testnet3(新版): http://t01000.miner.interopnet.kittyhawk.wtf
-    
+
 ## 11. Benchmark数据共享：
     Testnet2(V20): https://github.com/filecoin-project/lotus/issues/839
     Testnet3(V24): https://github.com/filecoin-project/lotus/issues/1475
     Testnet3(V25): https://filecoin-benchmarks.on.fleek.co/
-    
+
 ## 12. 甘特图：
     https://app.instagantt.com/shared/s/1152992274307505/latest
-    
+
 ## 13 Proof 证明文件下载：
     JDCloud(v20): https://s3.cn-south-1.jdcloud-oss.com/proof-parameters/filecoin-proof-parameters-v20.tar.gz
     JDCloud(v25): env IPFS_GATEWAY=https://proof-parameters.s3.cn-south-1.jdcloud-oss.com/ipfs/
@@ -64,7 +64,7 @@ export IPFS_GATEWAY=https://proof-parameters.s3.cn-south-1.jdcloud-oss.com/ipfs/
 
 下载 https://filecoin-proofs.coinsummer.io/v25.txt 中的url地址，保存这些 URL 地址到一个文件中（比如，保存到 url.txt 文件中），然后使用 wget 工具下载，命令如下：
 ```Shell
-wget -c -t 0 0i url.txt
+wget -c -t 0 -i url.txt
 ```
 
 **【注意】** v25 版本的参数命名方式比较特别，在 Windows 上下载的时候会出现问题，因为 Windows 上不支持这种命名方式，如果在 Windows 上下载证明参数，然后再拷贝到 Linux 中，则需要自己手动重命名每个文件名。
