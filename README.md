@@ -52,6 +52,23 @@
     JDCloud(v25): env IPFS_GATEWAY=https://proof-parameters.s3.cn-south-1.jdcloud-oss.com/ipfs/
     CoinSummer(中国专用/ v24和v25): https://filecoin-proofs.coinsummer.io/
     CoinSummer(v25 URL): https://filecoin-proofs.coinsummer.io/v25.txt
+
+### A. 使用方法一：
+
+直接导出环境变量，然后再运行 miner init 的时候，或者启动 miner 的时候都会自动从这个 JDCloud 中下载：
+```Shell
+export IPFS_GATEWAY=https://proof-parameters.s3.cn-south-1.jdcloud-oss.com/ipfs/
+```
+
+### B. 使用方法二：
+
+下载 https://filecoin-proofs.coinsummer.io/v25.txt 中的url地址，保存这些 URL 地址到一个文件中（比如，保存到 url.txt 文件中），然后使用 wget 工具下载，命令如下：
+```Shell
+wget -c -t 0 0i url.txt
+```
+
+**【注意】** v25 版本的参数命名方式比较特别，在 Windows 上下载的时候会出现问题，因为 Windows 上不支持这种命名方式，如果在 Windows 上下载证明参数，然后再拷贝到 Linux 中，则需要自己手动重命名每个文件名。
+
 [参考](https://filecoinproject.slack.com/archives/CPFTWMY7N/p1587615402405300)
 
 
