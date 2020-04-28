@@ -52,6 +52,7 @@
     JDCloud(v25): env IPFS_GATEWAY=https://proof-parameters.s3.cn-south-1.jdcloud-oss.com/ipfs/
     CoinSummer(中国专用/ v24和v25): https://filecoin-proofs.coinsummer.io/
     CoinSummer(v25 URL): https://filecoin-proofs.coinsummer.io/v25.txt
+    最新版发布地址(最快更新 Proof 参数的地方【官方】): https://proofs.filecoin.io/
 
 ### A. 使用方法一：
 
@@ -168,7 +169,23 @@ lotus-storage-miner rewards list
 ```
 赎回之后，可能需要过一段时间才能看到自己钱包的余额增加。
 
-## 10. 未完
+## 10. 手动修改扇区状态
+
+```Shell
+lotus-storage-miner sectors update-state --really-do-it <SectorID> <NewSectorStatus>
+# 例如：手动修改扇区 1 的状态到 Unsealed 状态
+./lotus-storage-miner sectors update-state --really-do-it 1 Unsealed
+```
+## 11. 查看扇区的历史状态
+
+```Shell
+# 列举所有扇区信息：
+lotus-storage-miner sectors list
+# 查看某个扇区的历史状态
+lotus-storage-miner sectors status --log <SectorID>
+```
+
+## 12. 未完
 
 ```Shell
 lotus sync status
