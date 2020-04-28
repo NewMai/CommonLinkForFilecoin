@@ -32,8 +32,15 @@
     Go-filecoin：   https://github.com/filecoin-project/go-filecoin
     Rust-fil-proof: https://github.com/filecoin-project/rust-fil-proofs
 
-## 9. testnet/3 最大化内存参数（仅针对32GB扇区）：
-    export FIL_PROOFS_MAXIMIZE_CACHING=1
+## 9. testnet/3 使用文档：
+
+在Github项目中的Testnet/3分支下：
+
+    https://github.com/filecoin-project/lotus/blob/testnet/3/documentation/en/join-testnet.md
+
+搭建Testnet/3的本地测试网：
+
+    https://github.com/filecoin-project/lotus/blob/testnet/3/documentation/en/local-dev-net.md
 
 ## 10. 水龙头地址：
     Testnet2(旧版): https://faucet.testnet.filecoin.io/
