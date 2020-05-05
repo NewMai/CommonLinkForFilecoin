@@ -79,6 +79,42 @@ wget -c -t 0 -i url.txt
 
 [参考](https://filecoinproject.slack.com/archives/CPFTWMY7N/p1587615402405300)
 
+## 14  rust 和 rustup 的安装环境配置（Cargo）：
+
+当你不正确的安装 rust 环境，此时 lotus 编译的时候会找不到你的 cargo，你会看到如下的错误：
+
+```Shell
+Error: cargo is not installed.
+```
+
+此时，你就需要卸载以前的安装版本（如果安装有的话），比如，使用sudo方式安装的版本等：
+
+```Shell
+# 尝试执行以下命令
+sudo /usr/local/lib/rustlib/uninstall.sh
+sudo apt remove cargo
+```
+
+然后使用官方推荐的方式安装 Cargo （注意不要使用 sudo 安装）：
+
+```Shell
+# 方法一：
+curl https://sh.rustup.rs -sSf | sh
+
+# 方法二：
+wget https://sh.rustup.rs -O ./cargo_install_script.sh     # 下载安装脚本
+chmod +x ./cargo_install_script.sh                         # 添加可执行权限
+./cargo_install_script.sh                                  # 安装，不要用 sudo
+
+```
+
+**参考链接：**
+
+[【官方文档】](https://www.rust-lang.org/tools/install)
+
+[【社区文档】](https://learnku.com/docs/rust-lang/2018/ch01-01-installation/4494)
+
+[【免翻墙版】](https://www.cnblogs.com/honyer/p/11877145.html)
 
 # 二、常用命令：
 
