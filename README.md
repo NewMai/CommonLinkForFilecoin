@@ -105,7 +105,6 @@ curl https://sh.rustup.rs -sSf | sh
 wget https://sh.rustup.rs -O ./cargo_install_script.sh     # 下载安装脚本
 chmod +x ./cargo_install_script.sh                         # 添加可执行权限
 ./cargo_install_script.sh                                  # 安装，不要用 sudo
-
 ```
 
 **参考链接：**
@@ -115,6 +114,15 @@ chmod +x ./cargo_install_script.sh                         # 添加可执行权�
 [【社区文档】](https://learnku.com/docs/rust-lang/2018/ch01-01-installation/4494)
 
 [【免翻墙版】](https://www.cnblogs.com/honyer/p/11877145.html)
+
+## 15. Lotus 可执行文件备份
+
+地址： https://github.com/NewMai/lotus_bin
+
+下载：
+```Shell
+git clone https://github.com/NewMai/lotus_bin.git
+```
 
 # 二、常用命令：
 
