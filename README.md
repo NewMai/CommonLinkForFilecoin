@@ -123,6 +123,11 @@ chmod +x ./cargo_install_script.sh                         # 添加可执行权�
 ```Shell
 git clone https://github.com/NewMai/lotus_bin.git
 ```
+## 16. 使用 GPU 算 Precommit2
+
+https://github.com/filecoin-project/neptune
+
+[【相关链接】](https://filecoinproject.slack.com/archives/CEGB67XJ8/p1587776730458900)
 
 # 二、常用命令：
 
