@@ -1,6 +1,18 @@
 
 # 一、常用链接：
 
+
+## 0.0. CoinSummer 整理的常用命令和链接
+
+https://github.com/CoinSummer/filecoin
+
+## 0.1. 同步数据每日备份
+
+来源于 **CoinSummer**：
+
+https://filecoin.coinsummer.io/datastore.html
+
+
 ## 1. lotus安装文档：
     https://docs.lotu.sh/en+install-lotus-ubuntu
 
@@ -128,6 +140,16 @@ git clone https://github.com/NewMai/lotus_bin.git
 https://github.com/filecoin-project/neptune
 
 [【相关链接】](https://filecoinproject.slack.com/archives/CEGB67XJ8/p1587776730458900)
+
+
+
+
+
+
+
+
+
+
 
 # 二、常用命令：
 
